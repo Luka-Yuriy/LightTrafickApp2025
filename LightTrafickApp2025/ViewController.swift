@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var redView: UIView!
     @IBOutlet var yellowView: UIView!
     @IBOutlet var greenView: UIView!
@@ -38,31 +38,29 @@ class ViewController: UIViewController {
         lightTurned = .red
         
     }
-
+    
     @IBAction func lightChangeButtonDidTaped() {
+        lightChangeButton.setTitle("NEXT", for: .normal)
         
         switch lightTurned {
         case .red:
             redView.alpha = 1
             yellowView.alpha = 0.3
             greenView.alpha = 0.3
+            
             lightTurned = .yellow
         case .yellow:
             redView.alpha = 0.3
             yellowView.alpha = 1
             greenView.alpha = 0.3
+            
             lightTurned = .green
         case .green:
             redView.alpha = 0.3
             yellowView.alpha = 0.3
             greenView.alpha = 1
+            
             lightTurned = .red
         }
     }
-    
-    
-    
-    
-    
 }
-

@@ -50,7 +50,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="lightChangeButtonDidTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPH-bd-zxO"/>
+                                    <action selector="lightChangeButtonDidTaped" destination="BYZ-38-t0r" eventType="touchUpInside" id="T9x-WU-cMz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +67,7 @@
                     </view>
                     <connections>
                         <outlet property="greenView" destination="WOi-CY-m0r" id="WLC-PL-dRy"/>
-                        <outlet property="lightChangeButton" destination="X1Y-3T-qqF" id="CEX-vG-ld3"/>
+                        <outlet property="lightChangeButton" destination="X1Y-3T-qqF" id="yEd-As-Fd5"/>
                         <outlet property="redView" destination="8SZ-5T-2Te" id="b9A-iy-2KR"/>
                         <outlet property="yellowView" destination="z3a-mJ-7Wo" id="oku-s8-43b"/>
                     </connections>
