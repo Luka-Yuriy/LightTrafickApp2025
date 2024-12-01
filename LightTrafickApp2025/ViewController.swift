@@ -26,7 +26,9 @@ class ViewController: UIViewController {
         redSection.alpha = lightOff
         yellowSection.alpha = lightOff
         greenSection.alpha = lightOff
-        
+    }
+    
+    override func viewWillLayoutSubviews() {
         redSection.layer.cornerRadius = redSection.frame.height / 2
         yellowSection.layer.cornerRadius = yellowSection.frame.height / 2
         greenSection.layer.cornerRadius = greenSection.frame.height / 2
