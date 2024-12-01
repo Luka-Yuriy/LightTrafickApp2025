@@ -9,12 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var redView: UIView!
-    @IBOutlet var yellowView: UIView!
-    @IBOutlet var greenView: UIView!
+    @IBOutlet var redSection: UIView!
+    @IBOutlet var yellowSection: UIView!
+    @IBOutlet var greenSection: UIView!
     @IBOutlet var lightChangeButton: UIButton!
     
-    private var lightTurned: colorOfLight = .red
+    private var lightOfSection: colorOfLight = .red
     
     enum colorOfLight {
         case red
@@ -25,13 +25,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        redView.alpha = 0.3
-        yellowView.alpha = 0.3
-        greenView.alpha = 0.3
+        redSection.alpha = 0.3
+        yellowSection.alpha = 0.3
+        greenSection.alpha = 0.3
         
-        redView.layer.cornerRadius = redView.frame.height / 2
-        yellowView.layer.cornerRadius = yellowView.frame.height / 2
-        greenView.layer.cornerRadius = greenView.frame.height / 2
+        redSection.layer.cornerRadius = redSection.frame.height / 2
+        yellowSection.layer.cornerRadius = yellowSection.frame.height / 2
+        greenSection.layer.cornerRadius = greenSection.frame.height / 2
         
         lightChangeButton.layer.cornerRadius = 12
     }
@@ -39,22 +39,22 @@ class ViewController: UIViewController {
     @IBAction func lightChangeButtonDidTaped() {
         lightChangeButton.setTitle("NEXT", for: .normal)
         
-        switch lightTurned {
+        switch lightOfSection {
         case .red:
-            redView.alpha = 1
-            yellowView.alpha = 0.3
-            greenView.alpha = 0.3
-            lightTurned = .yellow
+            redSection.alpha = 1
+            yellowSection.alpha = 0.3
+            greenSection.alpha = 0.3
+            lightOfSection = .yellow
         case .yellow:
-            redView.alpha = 0.3
-            yellowView.alpha = 1
-            greenView.alpha = 0.3
-            lightTurned = .green
+            redSection.alpha = 0.3
+            yellowSection.alpha = 1
+            greenSection.alpha = 0.3
+            lightOfSection = .green
         case .green:
-            redView.alpha = 0.3
-            yellowView.alpha = 0.3
-            greenView.alpha = 1
-            lightTurned = .red
+            redSection.alpha = 0.3
+            yellowSection.alpha = 0.3
+            greenSection.alpha = 1
+            lightOfSection = .red
         }
     }
 }
